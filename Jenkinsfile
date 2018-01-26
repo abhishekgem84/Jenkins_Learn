@@ -1,10 +1,9 @@
 pipeline {
   agent none
   stages {
-    stage('error') {
+    stage('Build') {
       steps {
-        sh 'mvn clean'
-        sh 'mvn install'
+        echo 'Started'
       }
     }
   }
