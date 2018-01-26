@@ -1,9 +1,14 @@
 pipeline {
   agent none
   stages {
-    stage('Build') {
+    stage('Status') {
       steps {
         echo 'Started'
+      }
+    }
+    stage('Clear') {
+      steps {
+        sh 'mvn clean'
       }
     }
   }
